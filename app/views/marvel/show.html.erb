@@ -1,0 +1,12 @@
+<% @story["results"].each do |item| %>
+  <h2><%= item["title"] %></h2>
+  <p><%= item["description"] %></p>
+  <hr>
+  <h3>Available characters: <%= item["characters"]["available"] %></h3>
+  <% item["characters"]["items"].each do |character| %>
+    <ul>
+      <li><%= character["name"] %></li>
+      <li><%= character["resourceURI"] %></li>
+    </ul>
+  <% end %>
+<% end %>
